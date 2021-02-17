@@ -13,7 +13,7 @@ Before getting started, please read this document carefully.
 # Acceptance criteria
 - Implement a GraphQL query that is fetching data from the SimplyRETS API `get_properties` endpoint ([documentation here](https://docs.simplyrets.com/api/index.html#/Listings/get_properties)).
 - Your GraphQL query must accept a `city` filter parameter to filter the API results (e.g. `houston`)
-- The `/graphql` endpoint must be protected by Basic HTTP Authentication. You can hardcode the following credentials: `user1@sideinc.com` / `676cfd34-e706-4cce-87ca-97f947c43bd4`
+- The `/graphql` endpoint must be protected by Bearer HTTP Authentication. You can hardcode the following credentials: `user1@sideinc.com` / `676cfd34-e706-4cce-87ca-97f947c43bd4`
 - You must use `jest` to write your tests for your queries, resolvers, and middlewares.
 - Please document your code via comments and the README.md to explain tradeoffs and design decisions that you have made.
 # What you will be assessed on?
