@@ -1,8 +1,8 @@
 const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
 const app = express();
 
 // Please use apollo server to implement your graphql query
+// const { ApolloServer } = require('apollo-server-express');
 // const server = new ApolloServer({
 //  //...
 // });
