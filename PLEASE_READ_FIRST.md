@@ -44,8 +44,8 @@ Navigate to `http://localhost:4000/graphql`.
 ## What will you find inside this boilerplate
 
 In this boilerplate, you will find:
-- The main entry file: `index.js`
-- All the types from the SimplyRETS API ready to use with GraphQL: `types/index.js`
+- The main entry file: `index.test.js`
+- All the types from the SimplyRETS API ready to use with GraphQL: `types/index.test.js`
 - A `README.md` file to document your comments and design decisions
 - Inside the `package.json`, we added the following packages:
     - `express`

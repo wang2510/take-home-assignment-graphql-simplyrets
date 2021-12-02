@@ -1,18 +1,21 @@
-const express = require('express');
-const app = express();
+import express from 'express';
+import { getApolloServer } from './app/service';
 
-// Please use apollo server to implement your graphql query
-// const { ApolloServer } = require('apollo-server-express');
-// const server = new ApolloServer({
-//  //...
-// });
-// server.applyMiddleware({ app, path:"/graphql" });
+// Self executing to run service
+(async function runServer() {
+    const apolloServer = getApolloServer();
 
-/** Please remove me line 11-14 **/
-app.get('*', (req, res, next) => {
-    res.send("Good luck! 😀")
-});
+    // Apollo server > 3.0 version requires this
+    await apolloServer.start();
+    const app = express();
 
-app.listen({ port: 4000 }, () =>
-    console.log(`Listening on http://localhost:4000/graphql`)
-);
+    // Set middleware
+    apolloServer.applyMiddleware({ app, path: '/graphql' });
+
+    app.listen({ port: 4000 }, () =>
+        console.log(`Listening on http://localhost:4000/graphql`)
+    );
+
+    return app;
+})();
+
